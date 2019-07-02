@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Sidebar from "./container/Sidebar";
+import  MessageList  from "./container/MessageList";
+import  AddMessage  from "./container/AddMessage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="container">
+      <Sidebar />
+      <section id="main">
+        <MessageList />
+        <AddMessage />
+      </section>
     </div>
   );
 }
