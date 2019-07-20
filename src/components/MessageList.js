@@ -2,16 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Message from './Message';
 
+import "../css/messagelist.css";
+
 const MessageList = ({ messages }) => {
     return (
-        <div>
-            <section id='messages-list'>
-                <ul>
+        <div className="messagelist">
+            <div>
+                <div>
                     {messages.map(message => {
                         return <Message key = {message.id} {...message} />;
                     })}
-                </ul>
-            </section>
+                </div>
+            </div>
         </div>
     )
 }

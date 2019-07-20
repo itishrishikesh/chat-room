@@ -1,11 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+
+import "../css/message.css";
+
 const Message = ({message, author}) => {
     return (
-        <div>
-            <p>
-                <i>{author}</i>: {message}
-            </p>
+        <div className = "message-container">
+            <i style={{ textAlign : author === "Me" ? "right" : "left" }}>{author}</i>
+            <div className={ author !== "Me" ? "message" : "me"}>
+                {message}
+            </div>
         </div>
     );
 }

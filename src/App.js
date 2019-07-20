@@ -1,17 +1,19 @@
 import React from 'react';
 import './App.css';
-import Sidebar from "./container/Sidebar";
+import Nav from "./container/Navbar";
 import  MessageList  from "./container/MessageList";
 import  AddMessage  from "./container/AddMessage";
 
+import "font-awesome/css/font-awesome.css";
+
 function App() {
   return (
-    <div id="container">
-      <Sidebar />
-      <section id="main">
+    <div class="container">
+      <div class="main">
+        <Nav />
         <MessageList />
         <AddMessage />
-      </section>
+      </div>
     </div>
   );
 }

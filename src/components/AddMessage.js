@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import "../css/addmessage.css";
 const AddMessage = (props) => {
     let input;
 
     return (
-        <section id="new-message">
+        <div className = "addmessage">
             <input onKeyPress = {(e) => {
                 if (e.key === 'Enter') {
                 props.dispatch(input.value, 'Me');
@@ -16,7 +17,8 @@ const AddMessage = (props) => {
                 input = node
             }}
             ></input>
-        </section>
+            <i className="fa fa-paper-plane"></i>
+        </div>
     );
 }
 

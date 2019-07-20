@@ -1,0 +1,18 @@
+.addmessage{
+    margin: 5px auto;
+    width: max-content;
+    bottom: 0;
+    border: 1px solid #000;    
+}
+.addmessage input{
+    width: 230px;
+    height: 30px;
+    background: #fff;
+    border: none;
+    margin: 0;
+    padding: 0 5px;
+    text-overflow: ellipsis;
+}
+.addmessage i{
+    margin: 0 10px;
+}

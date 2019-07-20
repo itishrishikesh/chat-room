@@ -1,0 +1,7 @@
+.messagelist{
+    overflow: auto;
+    scroll-behavior: auto;
+    height: 85vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
