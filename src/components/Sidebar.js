@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 const Sidebar = ({ users }) => {
     return (
-        <aside id="sidebar" className="sidebar">
-            <ul>
+        <div id="sidebar" className="sidebar">
+            <div>
                 {
                     users === null ? null : users.map(user => {
-                        return <li key = {user.id}>{user.name}</li>;
+                        return <div key = {user.id}>{user.name}</div>;
                     })
                 }
-            </ul>
-        </aside>
+            </div>
+        </div>
     )
 }
 

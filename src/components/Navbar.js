@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Sidebar from './Sidebar';
 
 const Navbar = ({ users }) => {
     return (
         <React.Fragment>
-            <div className="navbar">Name</div>
-            <i className="fa fa-circle"></i>
+            <nav className="navbar">
+                <div>Random Chat Application</div>
+                <i className="fa fa-circle"></i>
+            </nav>
+            <Sidebar users={null}></Sidebar>
         </React.Fragment>
     )
 }
