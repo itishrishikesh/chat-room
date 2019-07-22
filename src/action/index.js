@@ -27,3 +27,8 @@ export const populateUsersList = users => ({
     type: types.USER_LIST,
     users
 });
+
+export const toggleModal = toggle => ({
+    type: types.MODAL,
+    toggle
+});

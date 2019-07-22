@@ -1,16 +1,44 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Sidebar from './Sidebar';
+import Modal from "react-modal";
 
-const Navbar = ({ users }) => {
+const Navbar = (props) => {
+    const toggleModal = () => props.dispatch(props.modal.show);
+
+    const modalStyle = {
+        content : {
+            width : "200px",
+            height: "max-content", 
+            margin : "auto", 
+            border: "1px solid #000", 
+            borderRadius: "0",
+            fontSize: "15px",
+            padding: "10px 20px",
+            margin: "8% auto"
+        }
+    }
+
     return (
-        <React.Fragment>
+        <div>
             <nav className="navbar">
                 <div>Random Chat Application</div>
-                <i className="fa fa-circle"></i>
+                <i className="fa fa-circle" onClick={toggleModal} ></i>
             </nav>
-            <Sidebar users={null}></Sidebar>
-        </React.Fragment>
+            <Modal isOpen={props.modal.show} onRequestClose={toggleModal} style={modalStyle}>
+                <div style={{
+                    color: "green",
+                    marginBottom: "10px",
+                    fontWeight: "600"
+                }}>Online Users</div>
+                {
+                    props.users === null ? null : props.users.map(user => {
+                        return <div key = {user.id}>{user.name}</div>;
+                    })
+                }
+
+            </Modal>
+        </div>
     )
 }
 
