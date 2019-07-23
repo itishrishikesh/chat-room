@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Sidebar from './Sidebar';
 import Modal from "react-modal";
 
 const Navbar = (props) => {
@@ -9,8 +8,7 @@ const Navbar = (props) => {
     const modalStyle = {
         content : {
             width : "200px",
-            height: "max-content", 
-            margin : "auto", 
+            height: "max-content",
             border: "1px solid #000", 
             borderRadius: "0",
             fontSize: "15px",
