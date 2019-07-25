@@ -4,12 +4,14 @@
   "private": true,
   "dependencies": {
     "chance": "^1.0.18",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
     "react-dom": "^16.8.6",
     "react-modal": "^3.9.1",
     "react-redux": "^7.1.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
     "redux": "^4.0.1",
     "redux-saga": "^1.0.4",
@@ -35,5 +37,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "```react``` ```redux``` ```redux-saga``` ```nodejs``` ```websocket```",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itishrishikesh/chat-room.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itishrishikesh/chat-room/issues"
+  },
+  "homepage": "https://github.com/itishrishikesh/chat-room#readme"
 }

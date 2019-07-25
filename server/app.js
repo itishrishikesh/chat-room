@@ -6,8 +6,8 @@ const users = [];
 
 const broadcast = (data, ws) => {
     wss.clients.forEach((client) => {
+        client.send(JSON.stringify(data));
         if(client.readyState === WebSocket.OPEN && client !== ws){
-            client.send(JSON.stringify(data));
         }
     })
 }
@@ -16,7 +16,6 @@ wss.on('connection', (ws) => {
     let index;
     console.log("connection is established");
     ws.on('message', (message) => {
-        console.log(message);
         const data = JSON.parse(message);
         switch(data.type){
             case 'ADD_USER': {

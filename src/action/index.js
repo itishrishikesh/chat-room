@@ -16,6 +16,11 @@ export const addUser = name => ({
     name
 });
 
+export const login = (username, password) => ({
+    type: types.LOGIN,
+    login: {username, password}
+})
+
 export const messageReceived = (message, author) => ({
     type : types.MESSAGE_RECEIVED,
     id: nextMessageId++,

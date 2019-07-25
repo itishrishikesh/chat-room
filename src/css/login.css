@@ -1,0 +1,26 @@
+.login-container{
+    font: 15px;
+}
+.login-container input{
+    box-sizing: border-box;
+    width: 95%;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+}
+.button-container{
+display: flex;
+align-content: center;
+justify-content: center;
+}
+.button-container a{
+    margin: 5px;
+}
+.button-container a:hover{
+    color: green;
+    cursor: pointer;
+}
+.fa-line{
+    border-right: 1px solid #000;
+    margin: 5px 10px;
+}
